@@ -1,0 +1,105 @@
+# Relm4 Documentation (Version 10)
+
+An idiomatic GUI library inspired by Elm and based on GTK4/libadwaita.
+
+## What is Relm4?
+
+Relm4 is a Rust GUI library that provides an idiomatic way to build cross-platform desktop applications. Built on top of **GTK4** and **libadwaita**, it combines their powerful widget libraries with a reactive programming model inspired by the Elm architecture.
+
+### Key Features
+
+- **Idiomatic Rust**: Fully type-safe APIs that leverage the Rust type system
+- **Reactive Programming Model**: Inspired by Elm, with a clear separation between model, messages, and view updates
+- **Clean APIs**: No macros required - write standard Rust code
+- **Cross-platform**: Runs on Linux, Windows, and macOS through GTK4
+- **Modern UI**: Native support for libadwaita's Material Design-inspired widgets
+
+## Requirements
+
+To work with Relm4, you should understand basic Rust language features. We recommend familiarity with:
+
+- Chapters 1, 3-6, 8, 10, and 13 of [The Rust Book](https://doc.rust-lang.org/stable/book/)
+
+### System Dependencies
+
+Before you start, install GTK4 and its dependencies:
+
+```bash
+# Ubuntu/Debian
+sudo apt install libgtk-4-dev libadwaita-1-dev
+
+# Fedora
+sudo dnf install gtk4-devel adwaita-1-devel
+
+# Arch Linux
+sudo pacman -S gtk4 libadwaita
+
+# macOS (via Homebrew)
+brew install gtk+4
+```
+
+For more detailed installation instructions, see the [gtk-rs documentation](https://gtk-rs.org/gtk4-rs/git/book/installation.html).
+
+## Adding to your project
+
+Add Relm4 to your `Cargo.toml`:
+
+```toml
+[dependencies]
+relm4 = "0.10"
+relm4-components = "0.10"
+```
+
+## Documentation Structure
+
+### Getting Started
+
+- [First App](docs/getting_started/first_app.md) - Build your first Relm4 application
+- [GTK-rs Overview](docs/getting_started/gtk_rs.md) - GTK4 basics for Relm4 developers
+
+### Core Concepts
+
+- [Basic Concepts](docs/basic_concepts/README.md) - Foundation of Relm4
+  - [Model](docs/basic_concepts/model.md) - Application state
+  - [Messages](docs/basic_concepts/messages.md) - Input and output messages
+    - [Input Messages](docs/basic_concepts/messages/input.md)
+    - [Output Messages](docs/basic_concepts/messages/output.md)
+  - [Widgets](docs/basic_concepts/widgets.md) - GTK widgets in Relm4
+  - [Components](docs/basic_concepts/components.md) - Building blocks of your application
+
+### UI Patterns
+
+- [Efficient UI Updates](docs/efficient_ui/README.md) - Optimizing widget updates
+  - [Tracker](docs/efficient_ui/tracker.md) - Fine-grained change detection
+  - [Factories](docs/efficient_ui/factory.md) - Dynamic lists of widgets
+  - [Position Function](docs/efficient_ui/factory_position.md)
+- [Widget Templates](docs/widget_templates/README.md) - Reusable widget hierarchies
+  - [Nested Elements](docs/widget_templates/accessing_nested_elements.md)
+- [Child Components](docs/ui_patterns/child_components.md) - Modular UI architecture
+
+### Advanced Topics
+
+- [Threads and Async](docs/advanced/threads_and_async/README.md) - Background processing
+  - [Workers](docs/advanced/threads_and_async/worker.md)
+  - [Commands](docs/advanced/threads_and_async/commands.md)
+  - [Async Components](docs/advanced/threads_and_async/async.md)
+- [Actions](docs/advanced/actions.md) - GNOME-style actions
+- [Data Binding](docs/advanced/data_binding.md) - Automatic widget synchronization
+- [Message Brokers](docs/advanced/message_broker.md) - Cross-component communication
+
+### Reference
+
+- [Architecture](docs/reference/architecture.md) - How Relm4 works internally
+- [CLI Arguments](docs/reference/cli.md) - Command-line argument handling
+- [Resource Bundles](docs/reference/resource_bundles.md) - Including icons and assets
+- [Tips and Tricks](docs/reference/tricks.md) - Helpful patterns
+
+## Community
+
+- **Website**: https://relm4.org
+- **GitHub**: https://github.com/Relm4/Relm4
+- **Matrix Chat**: https://matrix.to/#/#relm4:matrix.org
+
+## License
+
+Relm4 is dual-licensed under MIT and Apache 2.0 licenses.
